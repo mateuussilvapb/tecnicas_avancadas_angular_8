@@ -1,0 +1,43 @@
+<mat-card>
+  <mat-grid-list cols="2" rows=5 rowHeight="15:1" *ngIf="filme; else semRegistro">
+    <mat-grid-tile colspan="1" rowspan="5" class="padding20">
+      <img mat-card-image [src]="filme.urlFoto || urlFotoGenerica" />
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1"> Nome:
+      {{filme.titulo}}
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1">Data de Lançamento:
+      {{filme.dtLancamento | date: 'dd/MM/yyyy'}}
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1">Gênero:
+      {{filme.genero}}
+    </mat-grid-tile>
+    <mat-grid-tile class="quebrar-linha" colspan="1" rowspan="1">Descrição:
+      {{filme.descricao}}
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1">Nota IMDb:
+      <a [href]="filme.urlIMDb" target="_blank"> {{filme.nota}}</a>
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-card>
+<hr>
+<mat-card>
+  <mat-card-actions>
+    <button type="submit" color="accent" mat-raised-button (click)="editar()">Editar</button>
+    <button type="reset" color="warn" mat-raised-button (click)="excluir()">Excluir</button>
+  </mat-card-actions>
+</mat-card>
+
+<ng-template #semRegistro>
+  <h1 class="full-width main-div">Nenhum registro encontrado</h1>
+</ng-template>
+
+<!-- 
+<mat-list *ngIf="filme">
+  <mat-list-item> {{filme.titulo}}</mat-list-item>
+  <mat-list-item> {{filme.dtLancamento | date: 'dd/MM/yyyy'}}</mat-list-item>
+  <mat-list-item> {{filme.genero}}</mat-list-item>
+  <mat-list-item> {{filme.descricao}}</mat-list-item>
+  <mat-list-item> {{filme.nota}}</mat-list-item>
+  <img mat-card-image [src]="filme.urlFoto || urlFotoGenerica" />
+</mat-list> -->

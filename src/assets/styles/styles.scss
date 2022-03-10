@@ -1,0 +1,68 @@
+@import "reset";
+@import "themes";
+
+body {
+  margin: 0;
+}
+
+.center {
+  margin: 10px auto;
+}
+
+.width50 {
+  width: 50%;
+}
+
+.width75 {
+  width: 75%;
+}
+
+.main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.float-left {
+  float: left;
+}
+
+.margin10 {
+  margin: 10px;
+}
+
+.padding30 {
+  padding: 30px;
+}
+
+.padding-right50 {
+  padding-right: 50px;
+}
+
+.padding-left50 {
+  padding-left: 50px;
+}
+
+.padding10 {
+  padding: 10px;
+}
+
+.padding-bottom20 {
+  padding-bottom: 20px;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-width {
+  width: auto;
+}
+
+.quebrar-linha {
+  white-space: pre-line;
+}
